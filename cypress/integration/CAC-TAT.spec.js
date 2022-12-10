@@ -43,6 +43,6 @@ describe('Central de Atendimento ao Cliente TAT', function() {
     it.only('Seleciona opções do campo que possui uma select box', () => { 
       cy.get('#product', {  timeout: 5000 }).select('Cursos');
       cy.get('#product', {  timeout: 5000 }).select('Mentoria');
-      cy.get('#product', {  timeout: 5000 }).select(1);
+      cy.get('#product', {  timeout: 5000 }).select(1).should('have.value', 'blog');
     })
 })
