@@ -39,4 +39,10 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       cy.get('#email', { timeout: 5000 }).type('pedro@pedro.com.br').clear().type('pedro@pedro.com.br depois de limpar');
       cy.get('#open-text-area', {  timeout: 5000 }).type('Testando cypress').clear().type('Testando cypress depois de limpar');
     })
+
+    it.only('Seleciona opções do campo que possui uma select box', () => { 
+      cy.get('#product', {  timeout: 5000 }).select('Cursos');
+      cy.get('#product', {  timeout: 5000 }).select('Mentoria');
+      cy.get('#product', {  timeout: 5000 }).select(1);
+    })
 })
